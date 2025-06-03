@@ -1,64 +1,70 @@
-# 🧪 Cypress do Zero à Nuvem ☁️
+# Cypress do Zero à Nuvem 🌐
 
-Projeto de testes automatizados desenvolvido durante o curso **"Cypress, do Zero à Nuvem"** da [Talking About Testing](https://talkingabouttesting.courses/).  
-O sistema testado é a aplicação **Central de Atendimento ao Cliente TAT**, com o objetivo de aplicar boas práticas em testes E2E utilizando o Cypress.
+Este projeto contém os testes automatizados desenvolvidos por mim como aluno do curso **Cypress do Zero à Nuvem**, ministrado por [Walmyr Filho (wlsf82)](https://github.com/wlsf82).
 
----
+O curso tem como objetivo ensinar, de forma prática e progressiva, como criar testes automatizados utilizando o Cypress.
 
-## ⚙️ Pré-requisitos
+## 💡 Sobre o projeto
 
-Antes de começar, certifique-se de ter instalado:
+Automatização de testes de interface de uma aplicação front-end fictícia de Central de Atendimento ao Cliente, incluindo testes de:
 
-- [Node.js](https://nodejs.org/) — versão `v18.15.0` ou superior
-- [npm](https://www.npmjs.com/) — versão `9.5.0` ou superior
-- [Git](https://git-scm.com/)
+- Validação de campos obrigatórios
+- Upload de arquivos
+- Seleção de campos `select`, `checkbox` e `radio`
+- Comandos customizados
+- Testes com arquivos `fixtures`
+- Interceptações e testes avançados (futuros)
+- Validação de redirecionamento de links externos
 
----
+## 📁 Estrutura de pastas
 
-## 📦 Instalação do projeto
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/cypress-do-zero-a-nuvem.git
-
-2. Acesse a pasta do projeto:
-
-bash
-Copiar
-Editar
-cd cypress-do-zero-a-nuvem
-
-3. Instale as dependências:
-npm install
-
-🧪 Execução dos testes
-⚠️ Antes de rodar os testes, copie o arquivo cypress.env.example.json e renomeie para cypress.env.json.
-Esse arquivo contém variáveis sensíveis que são ignoradas pelo Git (.gitignore).
-
-Rodar os testes em modo headless (terminal):
-npm test
-
-Rodar os testes com a interface gráfica do Cypress:
-npm run cy:open
-
-📁 Estrutura do projeto
 cypress-do-zero-a-nuvem/
 ├── cypress/
-│   ├── e2e/                  # Casos de teste automatizados
-│   ├── fixtures/             # Dados de teste (JSONs)
-│   ├── support/
-│   │   ├── commands.js       # Comandos customizados
-│   │   └── e2e.js            # Configuração global dos testes  
-├── cypress.env.example.json # Modelo do arquivo de variáveis de ambiente
-├── cypress.config.js        # Configuração do Cypress
-├── package.json             # Scripts e dependências do projeto
-└── README.md                # Documentação do projeto
+│ ├── e2e/
+│ │ ├── CAC-TAT.cy.js
+│ │ └── privacy.policy.cy.js
+│ ├── fixtures/
+│ │ └── example.json
+│ └── support/
+│ ├── commands.js
+│ └── e2e.js
+├── cypress.config.js
+├── package.json
+└── README.md
 
-☁️ Cypress Cloud
-Este projeto está preparado para ser executado com Cypress Cloud, o serviço de relatórios e análise de testes do Cypress.
-Você pode configurar um workflow de CI (como GitHub Actions, GitLab CI, CircleCI, etc) para rodar os testes automaticamente a cada alteração no código.
 
-📬 Contato
-Dúvidas, sugestões ou colaborações?
-Abra uma issue neste repositório ou entre em contato https://github.com/italooliveir
-italo
+## ✅ Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm (ou yarn/pnpm)
+- Git
+
+## 🚀 Instalação
+
+1. Clone este repositório:
+
+```bash
+git clone git@github.com:italooliveir/cypress-do-zero-a-nuvem.git
+cd cypress-do-zero-a-nuvem
+Instale as dependências:
+npm install
+Instale o Cypress:
+npx cypress install
+
+🧪 Executando os testes
+Abrir o Cypress com interface (modo interativo)
+npx cypress open
+Rodar os testes em modo headless (terminal)
+npx cypress run
+
+☁️ Integração com Cypress Cloud (futuro)
+Este projeto poderá incluir integração com o Cypress Cloud para relatórios e dashboards.
+
+👨‍💻 Autor do curso
+Este projeto foi desenvolvido com base no curso ministrado por:
+
+Walmyr Filho - @wlsf82
+Canal: YouTube
+
+📘 Licença
+Este projeto segue os termos de uso e aprendizado do curso Cypress do Zero à Nuvem, com adaptações e personalizações feitas por mim como aluno.
