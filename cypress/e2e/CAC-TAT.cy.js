@@ -8,6 +8,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
   })
 
   it('preenche os campos obrigatórios e envia o formulário', () => {
+    cy.clock()
     cy.get('#firstName').type('Italo')
     cy.get('#lastName').type('Oliveira')
     cy.get('#email').type('teste@teste.com')
@@ -16,6 +17,8 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.contains('button', 'Enviar').click()
     
     cy.get('.success').should('be.visible')
+    cy.tick(3000)
+    cy.get('.success').should('not.be.visible')
   })
 
   it('exibe mensagem de erro ao submeter o formulário com um email com formatação inválida', () => {
@@ -28,6 +31,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
   })
 
   it('o campo de telefone continua vazio quando preenchido com valor não-numérico', () => {
+
     cy.get('#firstName').type('Italo')
     cy.get('#lastName').type('Oliveira')
     cy.get('#email').type('teste@teste.com')
