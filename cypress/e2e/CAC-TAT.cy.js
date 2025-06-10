@@ -197,4 +197,14 @@ it('faz uma requisição HTTP', () => {
     .its('body')
     .should('include', 'CAC TAT')
     })
+    //apenas pra conhecimento
+    it('encontra o gato escondido', () => {
+      cy.get('#cat')
+      .invoke('show')
+      .should('be.visible')
+      cy.get('#title')
+      .invoke('text', 'CAC TAT')
+      cy.get('#subtitle')
+      .invoke('text', 'eu amo gatos')
+    })
 })
